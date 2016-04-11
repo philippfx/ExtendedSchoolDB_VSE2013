@@ -62,13 +62,13 @@ namespace Forms
             var myItems = new List<string> { "a", "b", "c" };
             listBox1.DataSource = myItems;
 
-            //var ListOfCourses = currentTeacher.Courses.ToList();
-            
-            var ListOfCourses = _context.Course.SelectMany(x => x.CourseName);
-
             var Courses = _context.Course.ToList();
 
-            var mensajeAlt = (from c in Courses
+            //var ListOfCourses = currentTeacher.Courses.ToList();
+            
+            //var ListOfCourses = _context.Course.SelectMany(x => x.CourseName);
+
+            var ListOfCourses = (from c in Courses
                               where c.TeacherId == currentTeacher.TeacherId
                               select c).FirstOrDefault().CourseName;
 
