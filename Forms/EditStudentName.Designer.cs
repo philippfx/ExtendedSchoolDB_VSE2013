@@ -1,6 +1,6 @@
 ﻿namespace Forms
 {
-    partial class Students
+    partial class EditStudentName
     {
         /// <summary>
         /// Required designer variable.
@@ -29,63 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditStudentName));
             System.Windows.Forms.Label studentNameLabel;
-            System.Windows.Forms.Label weightLabel;
-            System.Windows.Forms.Label dateOfBirthLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Students));
             this.program_StudentBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.program_StudentBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.studentNameTextBox = new System.Windows.Forms.TextBox();
-            this.weightTextBox = new System.Windows.Forms.TextBox();
-            this.dateOfBirthDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.newStudentButton = new System.Windows.Forms.Button();
             this.program_StudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.EditStudentName = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             studentNameLabel = new System.Windows.Forms.Label();
-            weightLabel = new System.Windows.Forms.Label();
-            dateOfBirthLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.program_StudentBindingNavigator)).BeginInit();
             this.program_StudentBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.program_StudentBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // studentNameLabel
-            // 
-            studentNameLabel.AutoSize = true;
-            studentNameLabel.Location = new System.Drawing.Point(51, 134);
-            studentNameLabel.Name = "studentNameLabel";
-            studentNameLabel.Size = new System.Drawing.Size(78, 13);
-            studentNameLabel.TabIndex = 1;
-            studentNameLabel.Text = "Student Name:";
-            // 
-            // weightLabel
-            // 
-            weightLabel.AutoSize = true;
-            weightLabel.Location = new System.Drawing.Point(85, 182);
-            weightLabel.Name = "weightLabel";
-            weightLabel.Size = new System.Drawing.Size(44, 13);
-            weightLabel.TabIndex = 3;
-            weightLabel.Text = "Weight:";
-            // 
-            // dateOfBirthLabel
-            // 
-            dateOfBirthLabel.AutoSize = true;
-            dateOfBirthLabel.Location = new System.Drawing.Point(58, 228);
-            dateOfBirthLabel.Name = "dateOfBirthLabel";
-            dateOfBirthLabel.Size = new System.Drawing.Size(71, 13);
-            dateOfBirthLabel.TabIndex = 5;
-            dateOfBirthLabel.Text = "Date Of Birth:";
             // 
             // program_StudentBindingNavigator
             // 
@@ -113,34 +79,9 @@
             this.program_StudentBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.program_StudentBindingNavigator.Name = "program_StudentBindingNavigator";
             this.program_StudentBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.program_StudentBindingNavigator.Size = new System.Drawing.Size(526, 25);
+            this.program_StudentBindingNavigator.Size = new System.Drawing.Size(303, 25);
             this.program_StudentBindingNavigator.TabIndex = 0;
             this.program_StudentBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -174,9 +115,16 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -199,8 +147,26 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // program_StudentBindingNavigatorSaveItem
             // 
@@ -211,72 +177,48 @@
             this.program_StudentBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.program_StudentBindingNavigatorSaveItem.Text = "Save Data";
             // 
+            // studentNameLabel
+            // 
+            studentNameLabel.AutoSize = true;
+            studentNameLabel.Location = new System.Drawing.Point(57, 61);
+            studentNameLabel.Name = "studentNameLabel";
+            studentNameLabel.Size = new System.Drawing.Size(78, 13);
+            studentNameLabel.TabIndex = 1;
+            studentNameLabel.Text = "Student Name:";
+            // 
             // studentNameTextBox
             // 
             this.studentNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.program_StudentBindingSource, "StudentName", true));
-            this.studentNameTextBox.Location = new System.Drawing.Point(135, 131);
+            this.studentNameTextBox.Location = new System.Drawing.Point(60, 87);
             this.studentNameTextBox.Name = "studentNameTextBox";
             this.studentNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.studentNameTextBox.TabIndex = 2;
-            // 
-            // weightTextBox
-            // 
-            this.weightTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.program_StudentBindingSource, "Weight", true));
-            this.weightTextBox.Location = new System.Drawing.Point(135, 179);
-            this.weightTextBox.Name = "weightTextBox";
-            this.weightTextBox.Size = new System.Drawing.Size(100, 20);
-            this.weightTextBox.TabIndex = 4;
-            // 
-            // dateOfBirthDateTimePicker
-            // 
-            this.dateOfBirthDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.program_StudentBindingSource, "DateOfBirth", true));
-            this.dateOfBirthDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateOfBirthDateTimePicker.Location = new System.Drawing.Point(135, 224);
-            this.dateOfBirthDateTimePicker.Name = "dateOfBirthDateTimePicker";
-            this.dateOfBirthDateTimePicker.Size = new System.Drawing.Size(100, 20);
-            this.dateOfBirthDateTimePicker.TabIndex = 6;
-            // 
-            // newStudentButton
-            // 
-            this.newStudentButton.Location = new System.Drawing.Point(135, 300);
-            this.newStudentButton.Name = "newStudentButton";
-            this.newStudentButton.Size = new System.Drawing.Size(87, 33);
-            this.newStudentButton.TabIndex = 7;
-            this.newStudentButton.Text = "Crear Nuevo";
-            this.newStudentButton.UseVisualStyleBackColor = true;
-            this.newStudentButton.Click += new System.EventHandler(this.newStudentButton_Click);
             // 
             // program_StudentBindingSource
             // 
             this.program_StudentBindingSource.DataSource = typeof(MyExtendedSchoolDB.Program.Student);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(60, 124);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // EditStudentName
-            // 
-            this.EditStudentName.Location = new System.Drawing.Point(251, 129);
-            this.EditStudentName.Name = "EditStudentName";
-            this.EditStudentName.Size = new System.Drawing.Size(117, 23);
-            this.EditStudentName.TabIndex = 8;
-            this.EditStudentName.Text = "Edit Student Name";
-            this.EditStudentName.UseVisualStyleBackColor = true;
-            this.EditStudentName.Click += new System.EventHandler(this.EditStudentName_Click);
-            // 
-            // Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 408);
-            this.Controls.Add(this.EditStudentName);
-            this.Controls.Add(this.newStudentButton);
-            this.Controls.Add(dateOfBirthLabel);
-            this.Controls.Add(this.dateOfBirthDateTimePicker);
-            this.Controls.Add(weightLabel);
-            this.Controls.Add(this.weightTextBox);
+            this.ClientSize = new System.Drawing.Size(303, 262);
+            this.Controls.Add(this.button1);
             this.Controls.Add(studentNameLabel);
             this.Controls.Add(this.studentNameTextBox);
             this.Controls.Add(this.program_StudentBindingNavigator);
-            this.Name = "Students";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "EditStudentName";
+            this.Text = "EditStudentName";
             ((System.ComponentModel.ISupportInitialize)(this.program_StudentBindingNavigator)).EndInit();
             this.program_StudentBindingNavigator.ResumeLayout(false);
             this.program_StudentBindingNavigator.PerformLayout();
@@ -303,10 +245,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton program_StudentBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox studentNameTextBox;
-        private System.Windows.Forms.TextBox weightTextBox;
-        private System.Windows.Forms.DateTimePicker dateOfBirthDateTimePicker;
-        private System.Windows.Forms.Button newStudentButton;
-        private System.Windows.Forms.Button EditStudentName;
+        private System.Windows.Forms.Button button1;
     }
 }
-

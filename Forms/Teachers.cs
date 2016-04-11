@@ -66,11 +66,11 @@ namespace Forms
 
             //var ListOfCourses = currentTeacher.Courses.ToList();
             
-            //var ListOfCourses = _context.Course.SelectMany(x => x.CourseName);
+            var ListOfCourses = _context.Course.SelectMany(x => x.CourseName);
 
-            var ListOfCourses = (from c in Courses
+            /*var ListOfCourses = (from c in Courses
                               where c.TeacherId == currentTeacher.TeacherId
-                              select c).FirstOrDefault().CourseName;
+                              select c).FirstOrDefault().CourseName;*/
 
             listBox2.DataSource = ListOfCourses; 
 

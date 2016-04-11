@@ -61,6 +61,14 @@ namespace Forms
 
         }
 
+        private void EditStudentName_Click(object sender, EventArgs e)
+        {
+
+            EditStudentName ShowEditStudentName = new EditStudentName();
+            ShowEditStudentName.Show();
+        
+        }
+
         
     }
 }
