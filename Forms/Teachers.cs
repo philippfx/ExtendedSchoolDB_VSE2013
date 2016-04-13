@@ -24,11 +24,13 @@ namespace Forms
         protected override void OnLoad(EventArgs e)
         {
             //LLAMADA A LOS DATOS
-            _context = new Program.SchoolContext();
+            this._context = new Program.SchoolContext();
             var Teachers = _context.Teachers.ToList();
 
             //INTRODUZCO LOS DATOS EN EL FORMULARIO
-            program_TeacherBindingSource.DataSource = Teachers;
+            this.program_TeacherBindingSource.DataSource = Teachers;
+
+            //this.program_CourseBindingSource.DataSource = _context.Course.ToList();
 
            
 
@@ -64,9 +66,9 @@ namespace Forms
 
             var Courses = _context.Course.ToList();
 
-            //var ListOfCourses = currentTeacher.Courses.ToList();
+            var ListOfCourses = currentTeacher.Courses.ToList();
             
-            var ListOfCourses = _context.Course.SelectMany(x => x.CourseName);
+            //var ListOfCourses = _context.Course.SelectMany(x => x.CourseName);
 
             /*var ListOfCourses = (from c in Courses
                               where c.TeacherId == currentTeacher.TeacherId

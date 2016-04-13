@@ -27,13 +27,16 @@ namespace Forms
             _context = new Program.SchoolContext();
             var Students = _context.Students.ToList();
 
-            //ORDENO LOS DATOS
+            /*ORDENO LOS DATOS
             var studentsPorPeso = (from s in Students
                                    orderby s.Weight
                                    select s).ToList();
 
             //INTRODUZCO LOS DATOS EN EL FORMULARIO
-            program_StudentBindingSource.DataSource = studentsPorPeso;
+            program_StudentBindingSource.DataSource = studentsPorPeso*/
+
+            program_StudentBindingSource.DataSource = Students;
+
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -56,19 +59,29 @@ namespace Forms
             
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void EditStudentName_Click(object sender, EventArgs e)
         {
-
             EditStudentName ShowEditStudentName = new EditStudentName();
-            ShowEditStudentName.Show();
-        
+            //ShowEditStudentName.ShowDialog();
+            ShowEditStudentName.textBox1.Text = this.studentNameTextBox.Text;
+
+            if (ShowEditStudentName.ShowDialog() == DialogResult.OK)
+            {
+                //this.Text = "Changes were saved";
+                //Don´t forget to set textBox1 in EditStudentName Form PUBLIC in its properties
+                this.studentNameTextBox.Text = ShowEditStudentName.textBox1.Text;
+                this.Validate();
+                this._context.SaveChanges();//IMPORTANTE
+            }
+
+            else
+                MessageBox.Show("Changes were not save");
         }
 
+        
+
+
+        
         
     }
 }

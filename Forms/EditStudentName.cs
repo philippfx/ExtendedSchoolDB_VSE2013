@@ -18,20 +18,16 @@ namespace Forms
             InitializeComponent();
         }
 
-        Program.SchoolContext _context;
-
-        protected override void OnLoad(EventArgs e)
+        private void Cancel_Click(object sender, EventArgs e)
         {
-            //LLAMADA A LOS DATOS
-            _context = new Program.SchoolContext();
-            var Students = _context.Students.ToList();
-
-            //INTRODUZCO LOS DATOS EN EL FORMULARIO
-            program_StudentBindingSource.DataSource = Students;
+            this.DialogResult = DialogResult.Cancel;
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void SaveChanges_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
 
         }
+
     }
 }

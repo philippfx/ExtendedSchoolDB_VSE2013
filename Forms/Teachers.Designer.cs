@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label teacherNameLabel;
-            System.Windows.Forms.Label courseIdLabel;
-            System.Windows.Forms.Label courseNameLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Teachers));
             this.program_TeacherBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -49,25 +47,14 @@
             this.program_TeacherBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.teacherNameTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombreCurso = new System.Windows.Forms.Button();
-            this.program_CourseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataRepeater1 = new Microsoft.VisualBasic.PowerPacks.DataRepeater();
-            this.courseNameTextBox = new System.Windows.Forms.TextBox();
-            this.courseIdTextBox = new System.Windows.Forms.TextBox();
             this.program_StudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             teacherNameLabel = new System.Windows.Forms.Label();
-            courseIdLabel = new System.Windows.Forms.Label();
-            courseNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.program_TeacherBindingNavigator)).BeginInit();
             this.program_TeacherBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.program_TeacherBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.program_CourseBindingSource)).BeginInit();
-            this.dataRepeater1.ItemTemplate.SuspendLayout();
-            this.dataRepeater1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.program_StudentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,24 +66,6 @@
             teacherNameLabel.Size = new System.Drawing.Size(81, 13);
             teacherNameLabel.TabIndex = 1;
             teacherNameLabel.Text = "Teacher Name:";
-            // 
-            // courseIdLabel
-            // 
-            courseIdLabel.AutoSize = true;
-            courseIdLabel.Location = new System.Drawing.Point(50, 17);
-            courseIdLabel.Name = "courseIdLabel";
-            courseIdLabel.Size = new System.Drawing.Size(55, 13);
-            courseIdLabel.TabIndex = 0;
-            courseIdLabel.Text = "Course Id:";
-            // 
-            // courseNameLabel
-            // 
-            courseNameLabel.AutoSize = true;
-            courseNameLabel.Location = new System.Drawing.Point(246, 23);
-            courseNameLabel.Name = "courseNameLabel";
-            courseNameLabel.Size = new System.Drawing.Size(74, 13);
-            courseNameLabel.TabIndex = 2;
-            courseNameLabel.Text = "Course Name:";
             // 
             // program_TeacherBindingNavigator
             // 
@@ -236,7 +205,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(58, 88);
+            this.button1.Location = new System.Drawing.Point(64, 78);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -244,11 +213,6 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // coursesBindingSource
-            // 
-            this.coursesBindingSource.DataMember = "Courses";
-            this.coursesBindingSource.DataSource = this.program_TeacherBindingSource;
             // 
             // nombreCurso
             // 
@@ -261,42 +225,6 @@
             this.nombreCurso.UseVisualStyleBackColor = true;
             this.nombreCurso.Click += new System.EventHandler(this.nombreCurso_Click);
             // 
-            // program_CourseBindingSource
-            // 
-            this.program_CourseBindingSource.DataSource = typeof(MyExtendedSchoolDB.Program.Course);
-            // 
-            // dataRepeater1
-            // 
-            // 
-            // dataRepeater1.ItemTemplate
-            // 
-            this.dataRepeater1.ItemTemplate.Controls.Add(courseNameLabel);
-            this.dataRepeater1.ItemTemplate.Controls.Add(this.courseNameTextBox);
-            this.dataRepeater1.ItemTemplate.Controls.Add(courseIdLabel);
-            this.dataRepeater1.ItemTemplate.Controls.Add(this.courseIdTextBox);
-            this.dataRepeater1.ItemTemplate.Size = new System.Drawing.Size(487, 61);
-            this.dataRepeater1.Location = new System.Drawing.Point(169, 164);
-            this.dataRepeater1.Name = "dataRepeater1";
-            this.dataRepeater1.Size = new System.Drawing.Size(495, 174);
-            this.dataRepeater1.TabIndex = 6;
-            this.dataRepeater1.Text = "dataRepeater1";
-            // 
-            // courseNameTextBox
-            // 
-            this.courseNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "CourseName", true));
-            this.courseNameTextBox.Location = new System.Drawing.Point(326, 20);
-            this.courseNameTextBox.Name = "courseNameTextBox";
-            this.courseNameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.courseNameTextBox.TabIndex = 3;
-            // 
-            // courseIdTextBox
-            // 
-            this.courseIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "CourseId", true));
-            this.courseIdTextBox.Location = new System.Drawing.Point(111, 14);
-            this.courseIdTextBox.Name = "courseIdTextBox";
-            this.courseIdTextBox.Size = new System.Drawing.Size(100, 20);
-            this.courseIdTextBox.TabIndex = 1;
-            // 
             // program_StudentBindingSource
             // 
             this.program_StudentBindingSource.DataSource = typeof(MyExtendedSchoolDB.Program.Student);
@@ -304,15 +232,16 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(19, 344);
+            this.listBox1.Location = new System.Drawing.Point(31, 120);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 95);
             this.listBox1.TabIndex = 8;
             // 
             // listBox2
             // 
+            this.listBox2.DisplayMember = "CourseName";
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(161, 344);
+            this.listBox2.Location = new System.Drawing.Point(173, 120);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(473, 95);
             this.listBox2.TabIndex = 9;
@@ -324,7 +253,6 @@
             this.ClientSize = new System.Drawing.Size(727, 548);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.dataRepeater1);
             this.Controls.Add(this.nombreCurso);
             this.Controls.Add(this.button1);
             this.Controls.Add(teacherNameLabel);
@@ -337,11 +265,6 @@
             this.program_TeacherBindingNavigator.ResumeLayout(false);
             this.program_TeacherBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.program_TeacherBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.program_CourseBindingSource)).EndInit();
-            this.dataRepeater1.ItemTemplate.ResumeLayout(false);
-            this.dataRepeater1.ItemTemplate.PerformLayout();
-            this.dataRepeater1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.program_StudentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -371,13 +294,8 @@
         private System.Windows.Forms.ToolStripButton program_TeacherBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox teacherNameTextBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.BindingSource coursesBindingSource;
         private System.Windows.Forms.Button nombreCurso;
-        private System.Windows.Forms.BindingSource program_CourseBindingSource;
-        private Microsoft.VisualBasic.PowerPacks.DataRepeater dataRepeater1;
         private System.Windows.Forms.BindingSource program_StudentBindingSource;
-        private System.Windows.Forms.TextBox courseNameTextBox;
-        private System.Windows.Forms.TextBox courseIdTextBox;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
     }

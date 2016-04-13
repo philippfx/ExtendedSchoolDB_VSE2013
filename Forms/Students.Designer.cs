@@ -35,6 +35,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Students));
             this.program_StudentBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.program_StudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -50,7 +51,6 @@
             this.weightTextBox = new System.Windows.Forms.TextBox();
             this.dateOfBirthDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.newStudentButton = new System.Windows.Forms.Button();
-            this.program_StudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.EditStudentName = new System.Windows.Forms.Button();
             studentNameLabel = new System.Windows.Forms.Label();
             weightLabel = new System.Windows.Forms.Label();
@@ -125,6 +125,10 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // program_StudentBindingSource
+            // 
+            this.program_StudentBindingSource.DataSource = typeof(MyExtendedSchoolDB.Program.Student);
             // 
             // bindingNavigatorCountItem
             // 
@@ -216,6 +220,7 @@
             this.studentNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.program_StudentBindingSource, "StudentName", true));
             this.studentNameTextBox.Location = new System.Drawing.Point(135, 131);
             this.studentNameTextBox.Name = "studentNameTextBox";
+            this.studentNameTextBox.ReadOnly = true;
             this.studentNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.studentNameTextBox.TabIndex = 2;
             // 
@@ -246,10 +251,6 @@
             this.newStudentButton.UseVisualStyleBackColor = true;
             this.newStudentButton.Click += new System.EventHandler(this.newStudentButton_Click);
             // 
-            // program_StudentBindingSource
-            // 
-            this.program_StudentBindingSource.DataSource = typeof(MyExtendedSchoolDB.Program.Student);
-            // 
             // EditStudentName
             // 
             this.EditStudentName.Location = new System.Drawing.Point(251, 129);
@@ -276,7 +277,6 @@
             this.Controls.Add(this.program_StudentBindingNavigator);
             this.Name = "Students";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.program_StudentBindingNavigator)).EndInit();
             this.program_StudentBindingNavigator.ResumeLayout(false);
             this.program_StudentBindingNavigator.PerformLayout();
