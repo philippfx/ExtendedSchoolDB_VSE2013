@@ -87,11 +87,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(201, 158);
+            this.label3.Location = new System.Drawing.Point(201, 145);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Text 3";
+            this.label3.Text = "Text4";
             // 
             // Menu
             // 
