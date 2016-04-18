@@ -61,6 +61,8 @@ namespace Forms
 
         private void EditStudentName_Click(object sender, EventArgs e)
         {
+            var currentStudent = (Program.Student)this.program_StudentBindingSource.Current;
+
             EditStudentName ShowEditStudentName = new EditStudentName();
             //ShowEditStudentName.ShowDialog();
             ShowEditStudentName.textBox1.Text = this.studentNameTextBox.Text;
@@ -69,9 +71,13 @@ namespace Forms
             {
                 //this.Text = "Changes were saved";
                 //Don´t forget to set textBox1 in EditStudentName Form PUBLIC in its properties
-                this.studentNameTextBox.Text = ShowEditStudentName.textBox1.Text;
-                this.Validate();
-                this._context.SaveChanges();//IMPORTANTE
+                //this.studentNameTextBox.Text = ShowEditStudentName.textBox1.Text;
+                //this.Validate();
+                //this._context.SaveChanges();
+
+                currentStudent.StudentName = ShowEditStudentName.textBox1.Text;
+                this.program_StudentBindingSource.ResetCurrentItem();
+                //_context.SaveChanges();
             }
 
             else
