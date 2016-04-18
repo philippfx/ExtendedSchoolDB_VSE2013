@@ -32,6 +32,7 @@
             this.ShowTeachers = new System.Windows.Forms.Button();
             this.ShowCourses = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ShowStudents
@@ -73,11 +74,21 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Text 1";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(201, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Will be deleted";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ShowCourses);
             this.Controls.Add(this.ShowTeachers);
@@ -95,5 +106,6 @@
         private System.Windows.Forms.Button ShowTeachers;
         private System.Windows.Forms.Button ShowCourses;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
